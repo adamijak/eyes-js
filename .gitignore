@@ -128,3 +128,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# svelte
+.svelte-kit/
+build/
+
+# pnpm
+.pnpm-store/
+pnpm-lock.yaml
