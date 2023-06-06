@@ -136,3 +136,6 @@ build/
 # pnpm
 .pnpm-store/
 pnpm-lock.yaml
+
+# ignore metadata
+.DS_Store
