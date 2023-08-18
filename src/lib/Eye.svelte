@@ -15,13 +15,13 @@
     let sclera = {
         cx: 100,
         cy: 100,
-        r: 90,
+        r: 80,
     };
 
     let iris = {
         cx: 100,
         cy: 100,
-        r: 50,
+        r: 40,
         style:"",
     };
 
@@ -47,10 +47,10 @@
         let dx = clientX - cx;
         let dy = clientY - cy;
         const norm = vec.getNorm(dx, dy);
-        
-        xdeg = Math.atan(dy/200) * mult;
-        ydeg = Math.atan(dx/200) * mult;
-        pupil.r = Math.min(30, Math.max(20, 30-norm/20));
+        const dist = 1000;
+        xdeg = Math.atan(dy/dist) * mult;
+        ydeg = Math.atan(dx/dist) * mult;
+        pupil.r = Math.min(20, Math.max(10, 20-(10 * Math.sqrt(norm))/50));
 
     }
 </script>
